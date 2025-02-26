@@ -1,0 +1,101 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00AB9708 .scope module, "testbench" "testbench" 2 3;
+ .timescale -9 -12;
+v009C9A70_0 .var "A", 15 0;
+v009C9EE8_0 .var "B", 15 0;
+v009C9700_0 .var "C", 15 0;
+v009C9910_0 .var "D", 15 0;
+v009C96A8_0 .var/i "i", 31 0;
+v009C9E38_0 .net "out_signal", 0 0, L_009CA640; 1 drivers
+S_00AB9818 .scope module, "uut" "combinational_circuit" 2 10, 3 1, S_00AB9708;
+ .timescale -9 -12;
+L_009A1DC0 .functor AND 1, L_009C95A0, L_009C9CD8, C4<1>, C4<1>;
+L_009A1F10 .functor OR 1, L_009C9BD0, L_009C9498, C4<0>, C4<0>;
+L_009A1BC8 .functor XOR 1, L_009A1DC0, L_009A1F10, C4<0>, C4<0>;
+L_009CA640 .functor NOT 1, L_009A1BC8, C4<0>, C4<0>, C4<0>;
+v009C9050_0 .net "A", 15 0, v009C9A70_0; 1 drivers
+v009C8FF8_0 .net "B", 15 0, v009C9EE8_0; 1 drivers
+v009C92B8_0 .net "C", 15 0, v009C9700_0; 1 drivers
+v009C90A8_0 .net "D", 15 0, v009C9910_0; 1 drivers
+v009C9100_0 .net *"_s18", 0 0, L_009C95A0; 1 drivers
+v009C8E98_0 .net *"_s20", 0 0, L_009C9CD8; 1 drivers
+v009C9260_0 .net *"_s23", 0 0, L_009C9BD0; 1 drivers
+v009C9310_0 .net *"_s25", 0 0, L_009C9498; 1 drivers
+v009C9368_0 .net "n1", 15 0, L_009C9E90; 1 drivers
+v009C8C30_0 .net "n11", 15 0, L_009C9A18; 1 drivers
+v009C8FA0_0 .net "n12", 15 0, L_009C9C80; 1 drivers
+v009C8C88_0 .net "n2", 15 0, L_009C9548; 1 drivers
+v009C8CE0_0 .net "n21", 0 0, L_009A1DC0; 1 drivers
+v009C9158_0 .net "n22", 0 0, L_009A1F10; 1 drivers
+v009C8D90_0 .net "n23", 0 0, L_009A1BC8; 1 drivers
+v009C8D38_0 .alias "out_signal", 0 0, v009C9E38_0;
+L_009C9AC8 .part v009C9A70_0, 0, 1;
+L_009C9968 .part v009C9EE8_0, 0, 1;
+L_009C9E90 .part/pv L_00992938, 0, 1, 16;
+L_009C9548 .part/pv L_00992970, 0, 1, 16;
+L_009C9758 .part v009C9700_0, 0, 1;
+L_009C9440 .part v009C9910_0, 0, 1;
+L_009C9A18 .part/pv L_00AB4630, 0, 1, 16;
+L_009C9C80 .part/pv L_00ABC0A8, 0, 1, 16;
+L_009C95A0 .part L_009C9E90, 0, 1;
+L_009C9CD8 .part L_009C9A18, 0, 1;
+L_009C9BD0 .part L_009C9548, 0, 1;
+L_009C9498 .part L_009C9C80, 0, 1;
+S_00AB8CF0 .scope module, "U1" "Logic_Block1" 3 9, 3 20, S_00AB9818;
+ .timescale -9 -12;
+L_00992938 .functor AND 1, L_009C9AC8, L_009C9968, C4<1>, C4<1>;
+L_00992970 .functor OR 1, L_009C9AC8, L_009C9968, C4<0>, C4<0>;
+v009C8EF0_0 .net "w", 0 0, L_00992970; 1 drivers
+v009C91B0_0 .net "x", 0 0, L_009C9AC8; 1 drivers
+v009C8DE8_0 .net "y", 0 0, L_009C9968; 1 drivers
+v009C8F48_0 .net "z", 0 0, L_00992938; 1 drivers
+S_00AB8C68 .scope module, "U6" "Logic_Block2" 3 10, 3 25, S_00AB9818;
+ .timescale -9 -12;
+L_00AB4630 .functor XOR 1, L_009C9758, L_009C9440, C4<0>, C4<0>;
+L_00ABC0A8 .functor NAND 1, L_009C9758, L_009C9440, C4<1>, C4<1>;
+v00ABE928_0 .net "p", 0 0, L_009C9758; 1 drivers
+v009928E0_0 .net "q", 0 0, L_009C9440; 1 drivers
+v009C9208_0 .net "r", 0 0, L_00AB4630; 1 drivers
+v009C8E40_0 .net "s", 0 0, L_00ABC0A8; 1 drivers
+    .scope S_00AB9708;
+T_0 ;
+    %vpi_call 2 22 "$dumpfile", "testbench.vcd";
+    %vpi_call 2 23 "$dumpvars", 1'sb0, S_00AB9708;
+    %vpi_call 2 25 "$display", "\360\237\232\200 Running Testbench with 60+ test cases...\012";
+    %set/v v009C96A8_0, 0, 32;
+T_0.0 ;
+    %load/v 8, v009C96A8_0, 32;
+   %cmpi/s 8, 60, 32;
+    %jmp/0xz T_0.1, 5;
+    %vpi_func 2 29 "$random", 8, 32;
+    %set/v v009C9A70_0, 8, 16;
+    %vpi_func 2 30 "$random", 8, 32;
+    %set/v v009C9EE8_0, 8, 16;
+    %vpi_func 2 31 "$random", 8, 32;
+    %set/v v009C9700_0, 8, 16;
+    %vpi_func 2 32 "$random", 8, 32;
+    %set/v v009C9910_0, 8, 16;
+    %delay 10000, 0;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v009C96A8_0, 33;
+    %vpi_call 2 34 "$display", "Test %0d | A: %h B: %h C: %h D: %h | Out: %h", T<8,33,s>, v009C9A70_0, v009C9EE8_0, v009C9700_0, v009C9910_0, v009C9E38_0;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v009C96A8_0, 32;
+    %set/v v009C96A8_0, 8, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %vpi_call 2 37 "$display", "\012\342\234\205 Test completed with 60+ test cases.";
+    %vpi_call 2 38 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "combinational_circuit.v";
