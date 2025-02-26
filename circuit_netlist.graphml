@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="U1" />
+    <node id="A" />
+    <node id="B" />
+    <node id="n1" />
+    <node id="n2" />
+    <node id="U6" />
+    <node id="C" />
+    <node id="D" />
+    <node id="n11" />
+    <node id="n12" />
+    <node id="" />
+    <node id="n21" />
+    <node id="n22" />
+    <node id="n23" />
+    <node id="z" />
+    <node id="x" />
+    <node id="y" />
+    <node id="w" />
+    <node id="r" />
+    <node id="p" />
+    <node id="q" />
+    <node id="s" />
+    <edge source="U1" target="A" />
+    <edge source="U1" target="B" />
+    <edge source="U1" target="n1" />
+    <edge source="U1" target="n2" />
+    <edge source="U6" target="C" />
+    <edge source="U6" target="D" />
+    <edge source="U6" target="n11" />
+    <edge source="U6" target="n12" />
+    <edge source="" target="n21" />
+    <edge source="" target="n1" />
+    <edge source="" target="n11" />
+    <edge source="" target="n22" />
+    <edge source="" target="n2" />
+    <edge source="" target="n12" />
+    <edge source="" target="n23" />
+    <edge source="" target="z" />
+    <edge source="" target="x" />
+    <edge source="" target="y" />
+    <edge source="" target="w" />
+    <edge source="" target="r" />
+    <edge source="" target="p" />
+    <edge source="" target="q" />
+    <edge source="" target="s" />
+  </graph>
+</graphml>
