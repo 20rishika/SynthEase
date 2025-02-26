@@ -66,19 +66,7 @@ bash
 Copy
 Edit
 python verilog_parser/train_model.py
-6️⃣ Run API for Real-time Prediction
-bash
-Copy
-Edit
-uvicorn verilog_parser.api:app --reload
-🔹 API will be available at http://127.0.0.1:8000/docs
 
-7️⃣ Run Web Dashboard
-bash
-Copy
-Edit
-streamlit run verilog_parser/web_app.py
-🔹 Open http://localhost:8501 to use the Web App
 
 📊 Machine Learning Models
 Model	MAE	MSE	R² Score
