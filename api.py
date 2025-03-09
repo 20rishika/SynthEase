@@ -4,8 +4,8 @@ import pandas as pd
 import time
 
 # ✅ Load the trained models
-rf_model = joblib.load("random_forest_v1.pkl")
-xgb_model = joblib.load("xgboost_v1.pkl")
+rf_model = joblib.load("random_forest_v2.pkl")
+xgb_model = joblib.load("xgboost_v2.pkl")
 
 app = FastAPI()
 
