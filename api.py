@@ -45,3 +45,6 @@ async def predict_depth(file: UploadFile = File(...)):
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
+@app.get("/")
+def home():
+    return {"message": "FastAPI is running! Use /docs for API documentation."}
