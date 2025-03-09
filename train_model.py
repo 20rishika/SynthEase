@@ -18,7 +18,7 @@ if "Depth" not in df.columns:
     raise ValueError("❌ ERROR: 'Depth' column is missing in circuit_features.csv. Check feature engineering step.")
 
 # ✅ Split features and target
-X = df.drop(columns=["Depth"])
+X = df.drop(columns=["Depth", "Gate Type_MUX"])  # Drop MUX to match API
 y = df["Depth"]
 
 # ✅ Normalize numerical data
